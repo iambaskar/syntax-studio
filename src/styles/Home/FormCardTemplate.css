@@ -1,0 +1,40 @@
+.form-card-template{
+    min-width: 23rem;
+    height: 30rem; 
+    border: 1px solid #d8d8d8;
+    padding: 1.2rem;
+    background-color: #ffF;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    transition: .2s;
+}
+.form-card-template-img-box{
+    width: 100%;
+    
+}
+.form-card-template-img-box > img{
+    width: 100%;
+}
+.form-card-template-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.form-card-template-inner > p{
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-weight: 400;
+    color: #222;
+    line-height: 1.8rem;
+}
+.form-card-template-read-more{
+    border: none;
+    color: #222;
+    font-size: 1rem;
+    background: transparent;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+

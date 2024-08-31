@@ -1,0 +1,16 @@
+.year-view {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .month {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .month-name {
+    font-weight: bold;
+  }
+  

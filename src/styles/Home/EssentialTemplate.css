@@ -1,0 +1,28 @@
+.essential-template{
+    display: flex;
+    align-items: flex-start;
+    padding-block: 5rem;
+    border-bottom: 1px solid #d8d8d8;
+}
+.essential-template-left, .essential-template-right{
+    width: 50%;
+}
+.essential-template-left > h1{
+    font-size: 2vw;
+    width: 70%;
+    font-weight: 700;
+    color: #000;
+}
+.essential-template-right > p{
+    line-height: 2rem;
+    font-weight: 400;
+}
+.essential-template-right > button{
+    border: none;
+    background-color: transparent;
+    color: #222;
+    font-family: 'Poppins';
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 600;
+}
