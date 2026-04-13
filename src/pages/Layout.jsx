@@ -1,17 +1,26 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { Home } from './Home'
-import { Recipes } from './Recipes'
-import { Snippets } from './Snippets'
+import { ShowcaseLayout } from './ShowcaseLayout'
+import { HooksLayout } from './HooksLayout'
+// import { RecipesLayout } from './RecipesLayout'
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  return null
+}
 
 export const Layout = () => {
-    return (
-        <>
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/recipes' element={<Recipes />} />
-                <Route path='/snippets' element={<Snippets />} />
-            </Routes>
-        </>
-    )
+  return (
+    <>
+      <ScrollToTop />
+      <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/showcase/*' element={<ShowcaseLayout />} />
+      <Route path='/hooks/*' element={<HooksLayout />} />
+      {/* <Route path='/recipes/*' element={<RecipesLayout />} /> */}
+      </Routes>
+    </>
+  )
 }

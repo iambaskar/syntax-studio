@@ -1,0 +1,89 @@
+.tbl-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line-2);
+}
+
+.tbl-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.tbl-wrap thead th {
+  padding: 0.6rem 1rem;
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  border-bottom: 1px solid var(--line-2);
+  white-space: nowrap;
+  transition: color 0.12s;
+  font-family: var(--mono);
+}
+
+.tbl-wrap tbody td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-2);
+  white-space: nowrap;
+}
+
+.tbl-wrap tbody tr:last-child td { border-bottom: none; }
+
+.tbl-wrap tbody tr {
+  transition: background 0.1s;
+}
+.tbl-wrap tbody tr:hover { background: var(--bg-2) !important; }
+
+.tbl-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.55rem;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: var(--mono);
+}
+
+/* Pagination */
+.tbl-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tbl-page-info {
+  font-size: 0.75rem;
+  color: var(--text-3);
+  font-family: var(--mono);
+}
+
+.tbl-page-btns {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.tbl-page-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-2);
+  border: 1px solid var(--line-2);
+  border-radius: 6px;
+  color: var(--text-2);
+  font-size: 0.78rem;
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: all 0.12s;
+}
+.tbl-page-btn:hover:not(:disabled) { background: var(--bg-3); color: var(--text); }
+.tbl-page-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+.tbl-page-btn.active { font-weight: 700; }

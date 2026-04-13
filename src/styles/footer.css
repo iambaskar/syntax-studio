@@ -1,0 +1,28 @@
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 1.25rem 2rem;
+  text-align: center;
+  background: var(--bg-1);
+}
+
+.footer-text {
+  font-size: 0.78rem;
+  color: var(--text-3);
+  font-family: var(--sans);
+  margin: 0;
+}
+
+.footer-heart {
+  color: #f43f5e;
+}
+
+.footer-link {
+  color: var(--text-2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s;
+}
+
+.footer-link:hover {
+  color: var(--text);
+}

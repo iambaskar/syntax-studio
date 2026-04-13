@@ -1,5 +1,100 @@
-body{
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* ── Default: Dark ── */
+:root {
+  --bg: #080809;
+  --bg-1: #0e0e10;
+  --bg-2: #141416;
+  --bg-3: #1c1c1f;
+  --line: #1f1f22;
+  --line-2: #2a2a2e;
+  --text: #f2f2f2;
+  --text-2: #888;
+  --text-3: #444;
+  --ink: #7c6fff;
+  --ink-2: #a78bfa;
+  --green: #22d3a5;
+  --amber: #f59e0b;
+  --red: #f43f5e;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Poppins', sans-serif;
+  --radius: 6px;
+  --radius-lg: 12px;
 }
+
+/* ── Light ── */
+[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-1: #f5f5f7;
+  --bg-2: #ebebee;
+  --bg-3: #e0e0e4;
+  --line: #e0e0e4;
+  --line-2: #cccccc;
+  --text: #0a0a0c;
+  --text-2: #555;
+  --text-3: #999;
+  --ink: #6c5fff;
+  --ink-2: #8b7cf8;
+  --green: #0ea87a;
+  --amber: #d97706;
+  --red: #e11d48;
+}
+
+/* ── Purple ── */
+[data-theme="purple"] {
+  --bg: #0d0b14;
+  --bg-1: #130f1e;
+  --bg-2: #1a1528;
+  --bg-3: #231c35;
+  --line: #231c35;
+  --line-2: #2e2545;
+  --text: #f0eeff;
+  --text-2: #8b7fc4;
+  --text-3: #4a3f6e;
+  --ink: #a78bfa;
+  --ink-2: #c4b5fd;
+  --green: #34d399;
+  --amber: #fbbf24;
+  --red: #f87171;
+}
+
+/* ── Ocean ── */
+[data-theme="ocean"] {
+  --bg: #050d14;
+  --bg-1: #091420;
+  --bg-2: #0e1e2e;
+  --bg-3: #152840;
+  --line: #152840;
+  --line-2: #1e3550;
+  --text: #e8f4ff;
+  --text-2: #6b9ab8;
+  --text-3: #2e5070;
+  --ink: #38bdf8;
+  --ink-2: #7dd3fc;
+  --green: #34d399;
+  --amber: #fbbf24;
+  --red: #f87171;
+}
+
+*, *::before, *::after {
+  padding: 0; margin: 0; box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-width: 320px;
+  transition: background 0.2s, color 0.2s;
+}
+
+::selection { background: var(--ink); color: #fff; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 4px; }

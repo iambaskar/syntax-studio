@@ -1,0 +1,106 @@
+/* Tabs */
+.ta-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--line-2);
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.ta-tabs::-webkit-scrollbar { display: none; }
+
+.ta-tab-btn {
+  padding: 0.55rem 1rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-3);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.ta-tab-btn:hover { color: var(--text-2); }
+
+/* Tab panel */
+.ta-tab-panel {
+  padding: 1.25rem;
+  border: 1px solid var(--line-2);
+  border-top: none;
+  animation: ta-fade 0.25s ease;
+}
+
+@keyframes ta-fade {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.ta-panel-text {
+  font-size: 0.82rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Accordion */
+.ta-acc-item {
+  border: 1px solid var(--line-2);
+  overflow: hidden;
+}
+
+.ta-acc-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 0.84rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--sans);
+  transition: background 0.15s;
+}
+.ta-acc-trigger:hover { background: var(--bg-2); }
+
+.ta-acc-icon {
+  font-size: 1rem;
+  color: var(--text-3);
+  flex-shrink: 0;
+}
+
+.ta-acc-body {
+  padding: 0 1rem 1rem;
+  font-size: 0.8rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  animation: ta-fade 0.25s ease;
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+}
+
+/* Pills */
+.ta-pills {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.ta-pill-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--line-2);
+  background: transparent;
+  color: var(--text-3);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: all 0.2s;
+}
+.ta-pill-btn:hover:not(.active) { background: var(--bg-2); color: var(--text); }
+.ta-pill-btn.active { color: #fff; }

@@ -1,28 +1,120 @@
-.essential-template{
+.essential-template {
     display: flex;
     align-items: flex-start;
-    padding-block: 5rem;
-    border-bottom: 1px solid #d8d8d8;
+    padding-block: 4rem;
+    border-bottom: 1px solid #e0e0e0;
+    gap: 2rem;
+    transition: background 0.2s;
 }
-.essential-template-left, .essential-template-right{
+
+.essential-template:hover {
+    background-color: #fafafa;
+}
+
+.essential-template-left,
+.essential-template-right {
     width: 50%;
 }
-.essential-template-left > h1{
+
+.essential-template-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: #000;
+    color: #fff;
+    padding: 0.2rem 0.7rem;
+    border-radius: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.essential-template-left > h1 {
     font-size: 2vw;
     width: 70%;
     font-weight: 700;
     color: #000;
+    line-height: 1.3;
 }
-.essential-template-right > p{
+
+.essential-template-right > p {
     line-height: 2rem;
     font-weight: 400;
+    color: #444;
 }
-.essential-template-right > button{
+
+.essential-template-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.essential-template-learn {
     border: none;
     background-color: transparent;
     color: #222;
     font-family: 'Poppins';
     font-size: 1rem;
-    margin-top: 1rem;
     font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.essential-template-learn:hover {
+    color: #000;
+}
+
+.essential-template-arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.essential-template-learn:hover .essential-template-arrow {
+    transform: translateX(5px);
+}
+
+.essential-template-copy {
+    padding: 0.45rem 1.1rem;
+    border: 1.5px solid #222;
+    background: transparent;
+    color: #222;
+    font-family: 'Poppins';
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.essential-template-copy:hover {
+    background: #222;
+    color: #fff;
+}
+
+.essential-template-copy.copied {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+@media screen and (max-width: 768px) {
+    .essential-template {
+        flex-direction: column;
+        padding-block: 2.5rem;
+    }
+
+    .essential-template-left,
+    .essential-template-right {
+        width: 100%;
+    }
+
+    .essential-template-left > h1 {
+        font-size: 5vw;
+        width: 100%;
+    }
 }

@@ -62,20 +62,29 @@ const initialState = {
   essentials: [
     {
       id: 1,
-      title: 'Modern Menu (Header) Designs',
-      desc: "Create intuitive and stylish headers that guide your users seamlessly through your website. Focus on user experience with clean and responsive navigation menus."
+      tag: "Navigation",
+      title: "Modern Menu (Header) Designs",
+      desc: "Create intuitive and stylish headers that guide your users seamlessly through your website. Focus on user experience with clean and responsive navigation menus.",
+      route: "/recipes/menu",
+      snippet: '<nav class="navbar">\n  <div class="nav-logo">Logo</div>\n  <ul class="nav-links">\n    <li><a href="#">Home</a></li>\n    <li><a href="#">About</a></li>\n    <li><a href="#">Contact</a></li>\n  </ul>\n</nav>',
     },
     {
       id: 2,
-      title: 'Footer Design Concepts',
-      desc: "Design footers that are both functional and visually appealing. These concepts focus on providing essential information and links while enhancing your site's overall aesthetic."
+      tag: "Layout",
+      title: "Footer Design Concepts",
+      desc: "Design footers that are both functional and visually appealing. These concepts focus on providing essential information and links while enhancing your site's overall aesthetic.",
+      route: "/recipes/footer",
+      snippet: '<footer class="footer">\n  <div class="footer-links">\n    <a href="#">Privacy</a>\n    <a href="#">Terms</a>\n  </div>\n  <p>&copy; 2024 Syntax Studio</p>\n</footer>',
     },
     {
       id: 3,
-      title: 'Responsive Layouts',
-      desc: "Master the art of layout design with responsive structures that adapt beautifully across all devices. Whether it’s a grid, flexbox, or full-page layout, ensure your content is presented in a user-friendly manner."
-    }
-  ]
+      tag: "CSS",
+      title: "Responsive Layouts",
+      desc: "Master the art of layout design with responsive structures that adapt beautifully across all devices. Whether it's a grid, flexbox, or full-page layout, ensure your content is presented in a user-friendly manner.",
+      route: "/recipes/layouts",
+      snippet: ".grid-layout {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n  gap: 1.5rem;\n}",
+    },
+  ],
 };
 
 const homeSlice = createSlice({
@@ -94,5 +103,5 @@ const homeSlice = createSlice({
   },
 });
 
-export const { getAllFormData, getCardData, getEssentials  } = homeSlice.actions;
+export const { getAllFormData, getCardData, getEssentials } = homeSlice.actions;
 export default homeSlice.reducer;
